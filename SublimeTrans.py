@@ -117,3 +117,13 @@ if sublime.platform()=='windows':
 		def run(sef):
 			windll.user32.MessageBoxA(None, "SublimeText2 Transparent\n\nWritten by vhanla", "SublimeText2 Transparent", 0);
 					
+	class SetOnOpenFile(sublime_plugin.EventListener):
+		def on_new(self, view):
+			sublime_opacity(228)		
+
+		def on_clone(self, view):	
+			sublime_opacity(228)		
+
+		def on_load(self, view):	
+			sublime_opacity(228)						
+			
